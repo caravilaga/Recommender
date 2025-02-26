@@ -12,10 +12,10 @@ import numpy as np
 
 app = Flask(__name__)
 
+
 CORS(app)
 # Crear un objeto API
 api = Api(app)
-
 
 # Objeto predicción del modelo
 class prediccion(Resource):
@@ -76,4 +76,4 @@ api.add_resource(prediccion, '/prediccion/<int:person_id>')
 
 
 if __name__ == '__main__':
-    app.run(port=8080,debug=True)
+    app.run(port=5000,debug=True)
